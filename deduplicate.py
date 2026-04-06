@@ -24,6 +24,10 @@ def normalize_club_name(name):
     # ШП variations -> "ШП №1"
     s = re.sub(r'(?i)школа\s+плавания\s*(?:№|#)\s*1', 'ШП №1', s)
     s = re.sub(r'ШП\s*№\s*1', 'ШП №1', s)
+
+    # Москва\Клин -> Лично
+    s = re.sub(r'(?i)Москва', 'Лично', s)
+    s = re.sub(r'(?i)Клин', 'Лично', s)
     
     # MURENA
     s = re.sub(r'(?i)MURENA\s+Lazarev\s+[Ss]wimming\s+[Cc]lub', 'MURENA Lazarev Swimming Club', s)
