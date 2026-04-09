@@ -57,8 +57,8 @@ jobs:
             echo "Новых протоколов не найдено"
           fi
 
-      - name: Пересборка данных (если добавлены PDF вручную)
-        if: steps.check.outputs.changed != 'true' && github.event_name == 'push'
+      - name: Пересборка данных (если есть новые протоколы)
+        if: steps.check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: |
           python3 scripts/parse_pdfs.py
           python3 scripts/deduplicate.py
