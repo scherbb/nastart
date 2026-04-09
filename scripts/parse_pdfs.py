@@ -8,9 +8,8 @@ import re
 import pdfplumber
 import fitz  # PyMuPDF
 
-PDF_DIR = "/home/user/workspace/pdf_protocols"
-OUTPUT_FILE = "/home/user/workspace/pdf_parsed_results.json"
-
+PDF_DIR = 'pdf_protocols'
+OUTPUT_FILE = 'scripts/pdf_parsed_results.json'
 PROTOCOLS = [
     {"name": "2022_10_30_3tour", "date": "2022-10-30", "meet": "НАСТАРТ III тур 2022"},
     {"name": "2022_12_18_4tour", "date": "2022-12-18", "meet": "НАСТАРТ IV тур 2022"},
@@ -25,7 +24,6 @@ PROTOCOLS = [
     {"name": "2024_03_17_1tour_9plus", "date": "2024-03-17", "meet": "НАСТАРТ I тур 2024"},
     {"name": "2024_05_19_2tour_7-8", "date": "2024-05-19", "meet": "НАСТАРТ II тур 2024"},
     {"name": "2024_05_19_2tour_9plus", "date": "2024-05-19", "meet": "НАСТАРТ II тур 2024"},
-    {"name": "2025_12_14_4tour_7m", "date": "2025-12-14", "meet": "НАСТАРТ IV тур 2025"},
     {"name": "2025_12_14_4tour_8plus", "date": "2025-12-14", "meet": "НАСТАРТ IV тур 2025"},
     # New protocols (downloaded from настарт.рф)
     {"name": "2024_10_27_3tour_7", "date": "2024-10-27", "meet": "НАСТАРТ III тур 2024"},
