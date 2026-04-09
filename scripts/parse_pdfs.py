@@ -8,8 +8,8 @@ import re
 import pdfplumber
 import fitz  # PyMuPDF
 
-PDF_DIR = 'pdf_protocols'
-OUTPUT_FILE = 'scripts/pdf_parsed_results.json'
+PDF_DIR = "./pdf_protocols"
+OUTPUT_FILE = "./scripts/pdf_parsed_results.json"
 PROTOCOLS = [
     {"name": "2022_10_30_3tour", "date": "2022-10-30", "meet": "НАСТАРТ III тур 2022"},
     {"name": "2022_12_18_4tour", "date": "2022-12-18", "meet": "НАСТАРТ IV тур 2022"},
