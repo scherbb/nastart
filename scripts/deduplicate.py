@@ -8,9 +8,9 @@ import os
 import re
 from collections import defaultdict
 
-LENEX_DATA = "/home/user/workspace/nastart_data.json"
-PDF_DATA = "/home/user/workspace/pdf_parsed_results.json"
-OUTPUT_FILE = "/home/user/workspace/nastart-tracker/data.json"
+LENEX_DATA = "./scripts/nastart_data.json"
+PDF_DATA = "./scripts/pdf_parsed_results.json"
+OUTPUT_FILE = "./data.json"
 
 # ============================================================
 # Club name normalization
