@@ -141,6 +141,19 @@ async function loadData() {
   try {
     const res = await fetch('data.json');
     athletesData = await res.json();
+
+    // Нормализация клубов: Москва/Клин → Лично
+    const clubReplacements = { 'Москва': 'Лично', 'Клин': 'Лично' };
+    for (const a of athletesData) {
+      a.clubs = a.clubs.map(c => clubReplacements[c] || c).filter((c, i, arr) => arr.indexOf(c) === i);
+      for (const h of (a.club_history || [])) {
+        h.clubs = h.clubs.map(c => clubReplacements[c] || c).filter((c, i, arr) => arr.indexOf(c) === i);
+      }
+      for (const r of a.results) {
+        if (r.club && clubReplacements[r.club]) r.club = clubReplacements[r.club];
+      }
+    }
+
     document.getElementById('totalAthletes').textContent = athletesData.length;
     const allMeets = new Set();
     athletesData.forEach(a => a.results.forEach(r => allMeets.add(r.meet)));
