@@ -41,6 +41,7 @@ PROTOCOLS = [
     {"name": "2024_12_22_4tour_7", "date": "2024-12-22", "meet": "НАСТАРТ IV тур 2024"},
     {"name": "2024_12_22_4tour_8plus", "date": "2024-12-22", "meet": "НАСТАРТ IV тур 2024"},
     {"name": "2025_12_14_4tour_7", "date": "2025-12-14", "meet": "НАСТАРТ IV тур 2025"},
+    {"name": "2026_04_12_3tour", "date": "2026-04-12", "meet": "НАСТАРТ III тур 2026"},
 ]
 
 def detect_pool_length(pdf_path):
