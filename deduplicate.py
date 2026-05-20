@@ -13,7 +13,7 @@ PDF_DATA = "/home/user/workspace/pdf_parsed_results.json"
 OUTPUT_FILE = "/home/user/workspace/nastart-tracker/data.json"
 
 # ============================================================
-# Club name normalization
+# Club name normalization.
 # ============================================================
 def normalize_club_name(name):
     """Normalize club name for display."""
